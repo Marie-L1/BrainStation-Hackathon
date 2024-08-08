@@ -1,0 +1,51 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Quicksand;
+}
+
+.body{
+    background-image: url("/assests/images/food-background-img.avif");
+    height: 56.25rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar{
+    background-color: #faedcd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px
+}
+
+.navbar__logo{
+    width: 50px;
+    height: 50px; 
+}
+
+
+.footer{
+    padding: 30px;
+    background-color: #495057;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+button{
+    padding: 10px;
+    border-radius: 5px;
+    width: 250px;
+    background-color: #faedcd;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #495057;
+    color: white;
+}
