@@ -6,7 +6,7 @@ body{
 
 .body{
     background-image: url("/assests/images/food-background-img.avif");
-    height: 750px;
+    height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -39,11 +39,14 @@ body{
 }
 
 button{
-    padding: 5px;
+    padding: 10px;
     border-radius: 5px;
     width: 100px;
     background-color: #faedcd;
     cursor: pointer;
+    border: solid 1px #495057;
+    
+
 }
 
 button:hover{
@@ -52,9 +55,10 @@ button:hover{
 }
 
 input{
-    padding: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    border: solid 1px #495057;
 }
-
 
 
 .recipe-list{
@@ -63,7 +67,7 @@ input{
     color: white;
     display: flex;
     flex-direction: column;
-
+    list-style: none;
 }
 
 .recipe-list__title{
@@ -72,11 +76,27 @@ input{
 }
 
 .recipe-list__ingredients{
+    font-size: 16px;
+    font-weight: 400;
+    padding-bottom: 20px;
+    list-style-type: circle ;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.recipe-list__ingredients::before{
+    content: "Ingredients";
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 15px;
+    
+.recipe-list__intructions{
     font-size: 20px;
     font-weight: 400;
 }
 
-.recipe-list__intructions{
+.recipe-list__cautions, .recipe-list__calories, .recipe-list__nutrients {
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 600;
 }
+  

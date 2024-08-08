@@ -22,28 +22,59 @@ async function generateElement(query){
 
     const recipes = recipeArray[Math.floor(Math.random() * recipeArray.length)];
     
-    console.log(recipes.recipe.label)
+    if (recipes){
     const recipeListItem = document.createElement("li"); // li
     recipeListItem.classList.add("recipe-list__item")
     
+    console.log(recipes.recipe)
 
     const recipeTitle = document.createElement("h3");
     recipeTitle.classList.add("recipe-list__title")
     recipeTitle.innerText = recipes.recipe.label;
     recipeListItem.appendChild(recipeTitle);
 
-    const recipeIngredients = document.createElement("p");
+    const recipeImg = document.createElement("img");
+    recipeImg.classList.add("recipe-list__img")
+    recipeImg.src = recipes.recipe.image;
+    recipeListItem.appendChild(recipeImg);
+
+    const recipeIngredients = document.createElement("li");
     recipeIngredients.classList.add("recipe-list__ingredients")
-    recipeIngredients.innerText = recipes.recipe.ingredientLines;
+    recipes.recipe.ingredientLines.forEach((ingredient) => {
+        if (ingredient){
+            const ingredientItem = document.createElement("li")
+            ingredientItem.innerText = ingredient;
+            recipeIngredients.appendChild(ingredientItem)
+        }
+    })
     recipeListItem.appendChild(recipeIngredients);
 
     const recipeInstructions = document.createElement("p");
-    recipeInstructions.classList.add("recipe-list__intructions")
-    recipeInstructions.innerText = recipes.instructions;
-    recipeListItem.appendChild(recipeInstructions);
+    recipeInstructions.classList.add("recipe-list__instructions")
+    recipeInstructions.innerText = recipes.recipe.instructions;
+    recipeListItem.appendChild(recipeInstructions)
+    
+    const cautions = document.createElement("li");
+    cautions.classList.add("recipe-list__cautions")
+    cautions.innerText = "Cautions:\t" + recipes.recipe.cautions;
+    recipeListItem.appendChild(cautions);
+
+    const calories = document.createElement("li");
+    calories.classList.add("recipe-list__calories")
+    calories.innerText = "Calories:\t" + Math.ceil(recipes.recipe.calories) + " kcal";
+    recipeListItem.appendChild(calories);
+
+    const mealType = document.createElement("li");
+    mealType.classList.add("recipe-list__calories")
+    mealType.innerText = "Meal Type:\t" + recipes.recipe.mealType;
+    recipeListItem.appendChild(mealType);
+
+    console.log(recipes.recipe.image)
 
     recipeListElements.appendChild(recipeListItem); // append to ul
   
+    }
+    
 }
 
 generateElement(query);
@@ -51,7 +82,3 @@ generateElement(query);
 // Get user input
 const formRef = document.getElementById("form_container");
 formRef.addEventListener("submit", handleSubmit);
-
-
-
-  
