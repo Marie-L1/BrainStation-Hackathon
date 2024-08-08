@@ -49,9 +49,9 @@ async function generateElement(query){
     })
     recipeListItem.appendChild(recipeIngredients);
 
-    const recipeInstructions = document.createElement("p");
+    const recipeInstructions = document.createElement("button");
     recipeInstructions.classList.add("recipe-list__instructions")
-    recipeInstructions.innerText = recipes.recipe.instructions;
+    recipeInstructions.src=recipes.recipe.shareAs;
     recipeListItem.appendChild(recipeInstructions)
     
     const cautions = document.createElement("li");

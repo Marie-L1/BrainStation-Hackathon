@@ -61,6 +61,8 @@ input{
     border: solid 1px #495057;
 }
 
+/* elements created by the API */
+
 .recipe-list{
     background-color: rgba(73, 80, 87, 0.75);
     padding: 50px 60px 60px 70px;
@@ -75,13 +77,11 @@ input{
 .recipe-list__title{
     font-size: 25px;
     font-weight: 600;
+    padding:0;
 }
 
 .recipe-list__img{
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding-bottom: 20px;
 }
 
 .recipe-list__ingredients{
@@ -89,9 +89,7 @@ input{
     font-weight: 400;
     padding-bottom: 20px;
     list-style-type: circle ;
-    display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
 }
 .recipe-list__ingredients::before{
     content: "Ingredients";
