@@ -6,7 +6,7 @@ body{
 
 .body{
     background-image: url("/assests/images/food-background-img.avif");
-    height: 56.25rem;
+    height: 750px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -56,15 +56,27 @@ input{
 }
 
 
-/* elements created by API
+
 .recipe-list{
-    background-color: rgba(73, 80, 87, 0.3);
+    background-color: rgba(73, 80, 87, 0.75);
+    padding: 60px;
     color: white;
+    display: flex;
+    flex-direction: column;
+
 }
 
 .recipe-list__title{
+    font-size: 25px;
+    font-weight: 600;
 }
 
-.recipe-list__ingredients{}
+.recipe-list__ingredients{
+    font-size: 20px;
+    font-weight: 400;
+}
 
-.recipe-list__intructions{} */
+.recipe-list__intructions{
+    font-size: 16px;
+    font-weight: 400;
+}
