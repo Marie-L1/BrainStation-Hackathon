@@ -48,11 +48,6 @@ async function generateElement(query){
         }
     })
     recipeListItem.appendChild(recipeIngredients);
-
-    const recipeInstructions = document.createElement("button");
-    recipeInstructions.classList.add("recipe-list__instructions")
-    recipeInstructions.src=recipes.recipe.shareAs;
-    recipeListItem.appendChild(recipeInstructions)
     
     const cautions = document.createElement("li");
     cautions.classList.add("recipe-list__cautions")
@@ -74,12 +69,19 @@ async function generateElement(query){
     cuisineType.innerText = "Cuisine Type:\t" + recipes.recipe.cuisineType;
     recipeListItem.appendChild(cuisineType);
 
-    console.log(recipes.recipe.image)
+    const recipeInstructions = document.createElement("button");
+    recipeInstructions.classList.add("recipe-list__instructions")
+    recipeInstructions.src=recipes.recipe.shareAs;
+    recipeInstructions.innerText = "Learn More"; 
+    recipeListItem.appendChild(recipeInstructions)
+    
+    recipeInstructions.addEventListener("click", () => {
+        console.log("clicked")
+        window.location.href = recipes.recipe.shareAs;
+    });
 
     recipeListElements.appendChild(recipeListItem); // append to ul
-  
     }
-    
 }
 
 generateElement(query);
@@ -87,3 +89,4 @@ generateElement(query);
 // Get user input
 const formRef = document.getElementById("form_container");
 formRef.addEventListener("submit", handleSubmit);
+

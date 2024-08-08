@@ -7,7 +7,7 @@ body{
 .body{
     padding: 60px 0;
     background-image: url("/assests/images/food-background-img.avif");
-    height: 90vh;
+    height: 80vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -77,7 +77,6 @@ input{
 .recipe-list__title{
     font-size: 25px;
     font-weight: 600;
-    padding:0;
 }
 
 .recipe-list__img{
@@ -88,14 +87,14 @@ input{
     font-size: 16px;
     font-weight: 400;
     padding-bottom: 20px;
-    list-style-type: circle ;
-    flex-wrap: wrap;
+    list-style-type: circle;
 }
 .recipe-list__ingredients::before{
     content: "Ingredients";
     font-size: 20px;
     font-weight: 600;
-    padding-bottom: 15px;
+    padding-bottom: 20px;
+    list-style-type: none;
 }
     
 .recipe-list__instructions{
@@ -106,4 +105,11 @@ input{
 .recipe-list__cautions, .recipe-list__calories, .recipe-list__nutrients, .recipe-list__cuisineType, .recipe-list__mealType {
     font-size: 12px;
     font-weight: 600;
+}
+
+.recipe-list__instructions{
+    margin-top: 20px;
+    width: 150px;
+    font-size: 15px;
+    padding: 5px;
 }
