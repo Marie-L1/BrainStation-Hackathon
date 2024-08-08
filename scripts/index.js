@@ -65,9 +65,14 @@ async function generateElement(query){
     recipeListItem.appendChild(calories);
 
     const mealType = document.createElement("li");
-    mealType.classList.add("recipe-list__calories")
+    mealType.classList.add("recipe-list__mealType")
     mealType.innerText = "Meal Type:\t" + recipes.recipe.mealType;
     recipeListItem.appendChild(mealType);
+
+    const cuisineType = document.createElement("li");
+    cuisineType.classList.add("recipe-list__cuisineType")
+    cuisineType.innerText = "Cuisine Type:\t" + recipes.recipe.cuisineType;
+    recipeListItem.appendChild(cuisineType);
 
     console.log(recipes.recipe.image)
 

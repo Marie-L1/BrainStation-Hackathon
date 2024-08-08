@@ -5,8 +5,9 @@ body{
 }
 
 .body{
+    padding: 60px 0;
     background-image: url("/assests/images/food-background-img.avif");
-    height: 100vh;
+    height: 90vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -27,7 +28,6 @@ body{
     height: 50px; 
 }
 
-
 .footer{
     padding: 30px;
     background-color: #495057;
@@ -36,6 +36,7 @@ body{
     justify-content: center;
     align-items: center;
     gap: 1.25rem;
+    display: flex;
 }
 
 button{
@@ -60,12 +61,13 @@ input{
     border: solid 1px #495057;
 }
 
-
 .recipe-list{
     background-color: rgba(73, 80, 87, 0.75);
-    padding: 60px;
+    padding: 50px 60px 60px 70px;
     color: white;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     list-style: none;
 }
@@ -73,6 +75,13 @@ input{
 .recipe-list__title{
     font-size: 25px;
     font-weight: 600;
+}
+
+.recipe-list__img{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .recipe-list__ingredients{
@@ -89,14 +98,14 @@ input{
     font-size: 20px;
     font-weight: 600;
     padding-bottom: 15px;
+}
     
-.recipe-list__intructions{
+.recipe-list__instructions{
     font-size: 20px;
     font-weight: 400;
 }
 
-.recipe-list__cautions, .recipe-list__calories, .recipe-list__nutrients {
-    font-size: 16px;
+.recipe-list__cautions, .recipe-list__calories, .recipe-list__nutrients, .recipe-list__cuisineType, .recipe-list__mealType {
+    font-size: 12px;
     font-weight: 600;
 }
-  
