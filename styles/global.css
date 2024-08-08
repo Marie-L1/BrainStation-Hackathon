@@ -11,6 +11,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .navbar{
@@ -38,9 +39,9 @@ body{
 }
 
 button{
-    padding: 10px;
+    padding: 5px;
     border-radius: 5px;
-    width: 250px;
+    width: 100px;
     background-color: #faedcd;
     cursor: pointer;
 }
@@ -49,3 +50,21 @@ button:hover{
     background-color: #495057;
     color: white;
 }
+
+input{
+    padding: 5px;
+}
+
+
+/* elements created by API
+.recipe-list{
+    background-color: rgba(73, 80, 87, 0.3);
+    color: white;
+}
+
+.recipe-list__title{
+}
+
+.recipe-list__ingredients{}
+
+.recipe-list__intructions{} */
