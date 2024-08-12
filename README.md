@@ -1,6 +1,6 @@
 # BrainStation API Hackathon
 
-This is the first Hackathon for the BrainStation Software Engineering Bootcamp.
+This is our first Hackathon for the BrainStation Software Engineering Bootcamp.
 
 ## Demo Video
 
